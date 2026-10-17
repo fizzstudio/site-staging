@@ -1,0 +1,15 @@
+main {
+  margin-inline: 2em;  
+}
+
+#pricing_plans {
+  display: flex;
+  justify-content: space-around;
+  gap: 2em;
+}
+
+#pricing_plans section {
+  outline: purple solid 1px;
+  border-radius: 1em;
+  padding: 1em;
+}

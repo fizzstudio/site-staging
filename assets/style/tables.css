@@ -1,0 +1,51 @@
+main {
+  margin: 2em;
+}
+
+table {
+  width: 75vw;
+  max-width: 90vw;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+tbody tr {
+  border-top: 1px solid gray;
+}
+
+th {
+  width: 25vw;
+  padding-inline: 0.5em;
+}
+
+thead tr {
+  background-color: hsl(271, 38%, 50%);
+  color: white;
+  padding-block: 0.8em;
+}
+
+thead th {
+  padding-block: 0.2em;
+}
+
+thead th:first-of-type {
+  color: hsl(271, 38%, 50%);
+}
+
+thead th {
+  padding-block: 0.2em;
+}
+
+tbody td,
+tbody th {
+  padding-inline: 0.5em;
+  padding-block: 0.8em;
+}
+
+h2 {
+  color: black;
+}
+
+h3 {
+  color: hsl(271, 38%, 50%);
+}

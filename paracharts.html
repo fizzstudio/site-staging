@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ParaCharts - Fizz Studio</title>
+
+  <link rel="shortcut icon" type="image/svg+xml" href="./assets/images/fizz-logo.svg" />
+
+  <meta name="description"
+    content="ParaCharts is accessible chart software for authoring, publishing, and delivering more usable, accountable chart experiences.">
+  <meta name="keywords"
+    content="charts, accessible, accessibility, chart software, data visualization, dataviz, inclusive, alt-text, sonification">
+  <link rel="canonical" href="https://fizz.studio/paracharts.html">
+
+  <meta property="og:title" content="ParaCharts - Fizz Studio">
+  <meta property="og:description"
+    content="ParaCharts is accessible chart software for authoring, publishing, and delivering more usable, accountable chart experiences.">
+  <meta property="og:image" content="./assets/images/fizz-logo.svg">
+  <meta property="og:url" content="https://fizz.studio/paracharts.html">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ParaCharts - Fizz Studio">
+  <meta name="twitter:description"
+    content="ParaCharts is accessible chart software for authoring, publishing, and delivering more usable, accountable chart experiences.">
+  <meta name="twitter:image" content="./assets/images/fizz-logo.svg">
+
+  <link rel="stylesheet" href="./assets/style/style.css">
+  <link rel="stylesheet" href="./assets/style/gallery.css">
+
+  <style>
+    :root {
+      --pc-purple: #8a4fc5;
+      --pc-purple-dark: #6f35ac;
+      --pc-purple-tint: rgba(138, 79, 197, 0.08);
+      --pc-border: rgba(138, 79, 197, 0.22);
+      --pc-text-muted: rgba(0, 0, 0, 0.72);
+      --pc-surface: rgba(138, 79, 197, 0.04);
+    }
+
+    .paracharts-page {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 3rem;
+    }
+
+    .paracharts-hero {
+      display: grid;
+      gap: 1.25rem;
+      padding: 2rem 0 1.75rem;
+    }
+
+    .paracharts-kicker {
+      margin: 0;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--pc-text-muted);
+    }
+
+    .paracharts-lockup {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .paracharts-mark {
+      width: 3.25rem;
+      height: 3.25rem;
+      flex: 0 0 auto;
+      object-fit: contain;
+    }
+
+    .paracharts-heading-group {
+      min-width: 0;
+    }
+
+    .paracharts-hero h1 {
+      margin: 0;
+      font-size: clamp(3rem, 7vw, 6rem);
+      line-height: 0.95;
+      letter-spacing: -0.03em;
+      color: var(--pc-purple);
+      text-transform: uppercase;
+    }
+
+    .paracharts-subhead {
+      max-width: 48rem;
+      margin: 0;
+      font-size: 1.2rem;
+      line-height: 1.55;
+    }
+
+    .paracharts-summary {
+      max-width: 48rem;
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--pc-text-muted);
+    }
+
+    .paracharts-cta-stack {
+      display: grid;
+      gap: 0.85rem;
+      margin-top: 0.25rem;
+      max-width: 54rem;
+    }
+
+    .paracharts-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+    }
+
+    .paracharts-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 3.25rem;
+      padding: 0.9rem 1.25rem;
+      border-radius: 0.8rem;
+      border: 2px solid var(--pc-purple);
+      text-decoration: none;
+      font-weight: 700;
+      line-height: 1.2;
+      transition: transform 120ms ease, background-color 120ms ease, color 120ms ease, border-color 120ms ease;
+    }
+
+    .paracharts-cta:hover,
+    .paracharts-cta:focus-visible {
+      transform: translateY(-1px);
+      outline: none;
+    }
+
+    .paracharts-cta-primary {
+      width: 100%;
+      justify-content: center;
+      background: var(--pc-purple);
+      color: #fff;
+      border-color: var(--pc-purple);
+      font-size: 1.1rem;
+      box-shadow: 0 6px 18px rgba(138, 79, 197, 0.18);
+    }
+
+    .paracharts-cta-primary:hover,
+    .paracharts-cta-primary:focus-visible {
+      background: var(--pc-purple-dark);
+      border-color: var(--pc-purple-dark);
+      color: #fff;
+    }
+
+    .paracharts-cta-secondary {
+      background: transparent;
+      color: var(--pc-purple-dark);
+      flex: 1 1 16rem;
+    }
+
+    .paracharts-cta-secondary:hover,
+    .paracharts-cta-secondary:focus-visible {
+      background: var(--pc-purple-tint);
+      color: var(--pc-purple-dark);
+    }
+
+    .paracharts-note {
+      margin: 0;
+      max-width: 48rem;
+      font-size: 0.98rem;
+      line-height: 1.6;
+      color: var(--pc-text-muted);
+    }
+
+    .paracharts-section {
+      margin-top: 2rem;
+      padding-top: 1.75rem;
+      border-top: 1px solid var(--pc-border);
+    }
+
+    .paracharts-section h2 {
+      margin: 0 0 0.9rem;
+      font-size: 1.4rem;
+    }
+
+    .paracharts-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .paracharts-card {
+      padding: 1rem;
+      border: 1px solid var(--pc-border);
+      border-radius: 0.8rem;
+      background: var(--pc-surface);
+    }
+
+    .paracharts-card h3 {
+      margin: 0 0 0.5rem;
+      font-size: 1.05rem;
+    }
+
+    .paracharts-card p {
+      margin: 0;
+      line-height: 1.6;
+      color: var(--pc-text-muted);
+    }
+
+    .paracharts-list {
+      margin: 0;
+      padding-left: 1.25rem;
+      max-width: 46rem;
+    }
+
+    .paracharts-list li + li {
+      margin-top: 0.55rem;
+    }
+
+    @media (max-width: 800px) {
+      .paracharts-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .paracharts-page {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+
+      .paracharts-lockup {
+        align-items: flex-start;
+      }
+
+      .paracharts-mark {
+        width: 2.75rem;
+        height: 2.75rem;
+      }
+
+      .paracharts-cta-row {
+        flex-direction: column;
+      }
+
+      .paracharts-cta-secondary {
+        width: 100%;
+        flex: 1 1 auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="navbar">
+    <a href="/" class="navbar-brand">
+      <img class="logo" src="./assets/images/fizz-logo.svg" alt="" style="width: 1.5em;">
+      <span class="site-title">Fizz Studio</span>
+    </a>
+
+    <ul class="top-nav">
+      <li><a href="paracharts.html">ParaCharts</a></li>
+      <li><a href="https://blog.fizz.studio/">Blog</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+  </header>
+
+  <main role="main" class="paracharts-page">
+    <section class="paracharts-hero" aria-labelledby="paracharts-heading">
+      <p class="paracharts-kicker">Accessible chart software</p>
+
+      <div class="paracharts-lockup">
+        <img class="paracharts-mark" src="./assets/images/fizz-logo.svg" alt="">
+        <div class="paracharts-heading-group">
+          <h1 id="paracharts-heading">ParaCharts</h1>
+        </div>
+      </div>
+
+      <p class="paracharts-subhead">
+        ParaCharts helps organizations create and deliver charts that are more accessible,
+        more understandable, and easier to support.
+      </p>
+
+      <p class="paracharts-summary">
+        Built for education, publishing, enterprise, and other serious workflows, ParaCharts
+        combines accessible chart authoring with structured narrative support so teams can
+        produce chart experiences with more consistency and less remediation effort.
+      </p>
+
+      <div class="paracharts-cta-stack" aria-label="Get ParaCharts">
+        <div class="paracharts-cta-row">
+          <a class="paracharts-cta paracharts-cta-primary" href="https://blog.fizz.studio/paracharts-trial/">Start free trial</a>
+        </div>
+        <div class="paracharts-cta-row">
+          <a class="paracharts-cta paracharts-cta-secondary" href="https://app.fizz.studio">Launch ParaCharts authoring tool</a>
+          <a class="paracharts-cta paracharts-cta-secondary" href="https://github.com/fizzstudio/ParaCharts">Access the source code</a>
+        </div>
+      </div>
+
+      <p class="paracharts-note">
+        ParaCharts software is available for evaluation and licensing through the links above.
+      </p>
+    </section>
+
+    <section class="paracharts-section" aria-labelledby="why-paracharts-heading">
+      <h2 id="why-paracharts-heading">Why organizations buy ParaCharts</h2>
+
+      <div class="paracharts-grid">
+        <article class="paracharts-card">
+          <h3>Improve accessibility quality</h3>
+          <p>
+            Give teams a better process for producing charts that are more usable for more people.
+          </p>
+        </article>
+
+        <article class="paracharts-card">
+          <h3>Reduce cleanup work</h3>
+          <p>
+            Address chart accessibility earlier in the workflow instead of relying on after-the-fact remediation.
+          </p>
+        </article>
+
+        <article class="paracharts-card">
+          <h3>Support accountable delivery</h3>
+          <p>
+            Use a clearer, more repeatable approach for charts in courses, products, reports, and internal tools.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="paracharts-section" aria-labelledby="included-heading">
+      <h2 id="included-heading">What you can evaluate now</h2>
+      <ul class="paracharts-list">
+        <li>The live authoring tool for direct product evaluation</li>
+        <li>A free trial request path for organizational review</li>
+        <li>The ParaCharts GitHub repository for technical inspection</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-container">
+      <!-- Start Col -->
+      <div class="">
+        <div class="widget">
+          <h3 class="block-title">Company</h3>
+          <ul class="menu">
+            <li><a href="https://fizz.studio/about.html">About Us</a></li>
+            <li><a href="https://blog.fizz.studio/">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- End Col -->
+
+      <!-- Start Col -->
+      <div class="">
+        <div class="widget">
+          <h3 class="block-title">Products</h3>
+          <ul class="menu">
+            <li><a href="https://fizz.studio/paracharts.html">ParaCharts</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- End Col -->
+
+      <!-- Start Col -->
+      <div class="">
+        <div class="widget">
+          <h3 class="block-title">Legal</h3>
+          <ul class="menu">
+            <li><a href="https://fizz.studio/legal/">Para Legal</a></li>
+            <li><a href="https://fizz.studio/legal/accessibility.html">Accessibility Statement</a></li>
+            <li><a href="https://fizz.studio/legal/privacy.html">Privacy</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- End Col -->
+
+      <!-- Start Col -->
+      <div class="">
+        <h3>Contact</h3>
+        <ul class="menu">
+          <li><a href="mailto:sales@fizz.studio">Sales</a></li>
+          <li><a href="mailto:help@fizz.studio">Customer Service</a></li>
+          <li><a href="mailto:press@fizz.studio">Press</a></li>
+        </ul>
+      </div>
+      <!-- End Col -->
+    </div>
+    <p id="copyright">&copy; 2026 Fizz Studio LLC. All rights reserved.</p>
+  </footer>
+
+</body>
+
+</html>

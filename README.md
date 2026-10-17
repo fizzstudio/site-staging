@@ -1,2 +1,3 @@
-# site-staging
-Fizz Studio website testbed
+# Site Staging
+
+Fizz Studio website testbed for fizz.studio

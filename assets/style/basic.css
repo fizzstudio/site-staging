@@ -1,0 +1,22 @@
+main {
+  max-width: 48em;
+  margin: auto;
+  padding-top: 2em;
+}
+
+
+main ul {
+  list-style: disc outside;
+}
+
+main dd,
+main ol,
+main ul {
+  margin: 0;
+  padding-left: 3em;
+}
+
+main li {
+  padding-bottom: 0.75em;
+  font-size: 1.1em;
+}
